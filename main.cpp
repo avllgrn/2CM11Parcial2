@@ -124,73 +124,66 @@ Fraccion divide(Fraccion A, Fraccion B){
 
 int main(void){
     Fraccion A[5][5], B[5][5], C[5][5], D[5][5];
-    int m,n,i,j;
+    int m1,n1,m2,n2,i,j,k;
 
     //1. Pide dato(s)
-    cout<<"Ingresa m ";cin>>m;
-    cout<<"Ingresa n ";cin>>n;
+    cout<<"Ingresa m1 ";cin>>m1;
+    cout<<"Ingresa n1 ";cin>>n1;
+    cout<<"Ingresa m2 ";cin>>m2;
+    cout<<"Ingresa n2 ";cin>>n2;
 
-    cout<<endl<<"Ingresa A"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            cout<<"Imgresa A["<<i<<"]["<<j<<"]"<<endl;
-            A[i][j].pideleAlUsuarioTusDatos();
+    if(n1==m2){
+        cout<<endl<<"Ingresa A"<<endl;
+        for(i=0;i<m1;i++){
+            for(j=0;j<n1;j++){
+                cout<<"Imgresa A["<<i<<"]["<<j<<"]"<<endl;
+                A[i][j].pideleAlUsuarioTusDatos();
+            }
+        }
+
+        cout<<endl<<"Ingresa B"<<endl;
+        for(i=0;i<m2;i++){
+            for(j=0;j<n2;j++){
+                cout<<"Imgresa A["<<i<<"]["<<j<<"]"<<endl;
+                B[i][j].pideleAlUsuarioTusDatos();
+            }
+        }
+
+        //2. Calcula
+        for(i=0;i<m1;i++){
+            for(j=0;j<n2;j++){
+                for(k=0;k<n1;k++)
+                    C[i][j] = suma(C[i][j] , multiplica(A[i][k], B[k][j]));
+            }
+        }
+
+        //3.Muestra resultado(s)
+        cout<<endl<<"A"<<endl;
+        for(i=0;i<m1;i++){
+            for(j=0;j<n1;j++){
+                A[i][j].muestraTusDatos();cout<<"\t";
+            }
+            cout<<endl;
+        }
+
+        cout<<endl<<"B"<<endl;
+        for(i=0;i<m2;i++){
+            for(j=0;j<n2;j++){
+                B[i][j].muestraTusDatos();cout<<"\t";
+            }
+            cout<<endl;
+        }
+
+        cout<<endl<<"C"<<endl;
+        for(i=0;i<m1;i++){
+            for(j=0;j<n2;j++){
+                C[i][j].muestraTusDatos();cout<<"\t";
+            }
+            cout<<endl;
         }
     }
-
-    cout<<endl<<"Ingresa B"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            cout<<"Imgresa A["<<i<<"]["<<j<<"]"<<endl;
-            B[i][j].pideleAlUsuarioTusDatos();
-        }
-    }
-
-    //2. Calcula
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            C[i][j] = suma(A[i][j], B[i][j]);
-        }
-    }
-
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            D[i][j] = resta(A[i][j], B[i][j]);
-        }
-    }
-
-    //3.Muestra resultado(s)
-    cout<<endl<<"A"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            A[i][j].muestraTusDatos();cout<<"\t";
-        }
-        cout<<endl;
-    }
-
-    cout<<endl<<"B"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            B[i][j].muestraTusDatos();cout<<"\t";
-        }
-        cout<<endl;
-    }
-
-    cout<<endl<<"C"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            C[i][j].muestraTusDatos();cout<<"\t";
-        }
-        cout<<endl;
-    }
-
-    cout<<endl<<"D"<<endl;
-    for(i=0;i<m;i++){
-        for(j=0;j<n;j++){
-            D[i][j].muestraTusDatos();cout<<"\t";
-        }
-        cout<<endl;
-    }
+    else
+        cout<<"No pueden multiplicarse... =("<<endl;
 
     return 0;
 }
