@@ -51,3 +51,12 @@ void Punto::modificaTusDatos(double x, double y){
     this->x = x;
     this->y = y;
 }
+
+
+double distanciaEntre(Punto A, Punto B){
+    return sqrt(
+        pow(B.dameTuY()-A.dameTuY(),2)
+        +
+        pow(B.dameTuX()-A.dameTuX(),2)
+    );
+}

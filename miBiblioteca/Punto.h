@@ -26,6 +26,7 @@ public:
     void modificaTuY(double y);
     void modificaTusDatos(double x, double y);
 };
+double distanciaEntre(Punto A, Punto B);
 
 
 #endif // PUNTO_H
