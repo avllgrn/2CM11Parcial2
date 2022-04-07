@@ -33,11 +33,35 @@ void CirculoP::muestraTusDatos(void){
 Punto CirculoP::dameTuC(void){
     return this->C;
 }
+void CirculoP::modificaTuC(Punto C){
+    this->C = C;
+}
+void CirculoP::modificaTuC(double xC,double yC){
+    this->C.modificaTuX(xC);
+    this->C.modificaTuY(yC);
+}
 Punto CirculoP::dameTuP(void){
     return this->P;
 }
+void CirculoP::modificaTuP(Punto P){
+    this->P = P;
+}
+void CirculoP::modificaTuP(double xP,double yP){
+    this->P.modificaTuX(xP);
+    this->P.modificaTuY(yP);
+}
+void CirculoP::modificaTusDatos(Punto C, Punto P){
+    this->C = C;
+    this->P = P;
+}
+void CirculoP::modificaTusDatos(double xC,double yC,double xP,double yP){
+    this->C.modificaTuX(xC);
+    this->C.modificaTuY(yC);
+    this->P.modificaTuX(xP);
+    this->P.modificaTuY(yP);
+}
 double CirculoP::dameTuRadio(void){
-    return distanciaEntre(C,P);
+    return distanciaEntre(this->C, this->P);
 }
 double CirculoP::dameTuDiametro(void){
     return 2 * this->dameTuRadio();
@@ -48,13 +72,3 @@ double CirculoP::dameTuArea(void){
 double CirculoP::dameTuPerimetro(void){
     return 2* M_PI * this->dameTuRadio();
 }
-
-
-
-
-
-
-
-
-
-
