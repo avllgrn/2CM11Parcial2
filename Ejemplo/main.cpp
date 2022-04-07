@@ -21,8 +21,29 @@ int main(void){
     Q1.muestraTusDatos();
     cout<<endl<<endl;
 
-
     CirculoP Q4(Q1.dameTuC(), Q1.dameTuP());
+    cout<<"Q4: ";
+    Q4.muestraTusDatos();cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    Q4.modificaTuC(Q2.dameTuC());
+    Q4.modificaTuP(Q2.dameTuP());
+    cout<<"Q4: ";
+    Q4.muestraTusDatos();cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    Q4.modificaTuC(c,d);
+    Q4.modificaTuP(a,b);
+    cout<<"Q4: ";
+    Q4.muestraTusDatos();cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    Q4.modificaTusDatos(B,A);
+    cout<<"Q4: ";
+    Q4.muestraTusDatos();cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    Q4.modificaTusDatos(c,a,b,d);
     cout<<"Q4: ";
     Q4.muestraTusDatos();cout<<endl<<endl;
     cout<<endl<<endl;
