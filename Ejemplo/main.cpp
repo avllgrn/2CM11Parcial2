@@ -1,109 +1,125 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Fecha.h"
-#include "Hora.h"
+#include "Evento.h"
 using namespace std;
 
 int main(void){
+    //Pruebas para constructores
+    //y muestraTusDatos()
+    cout<<"Pruebas para constructores y muestraTusDatos()"<<endl<<endl;
+    Evento E1;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
 
-    Fecha F1, F2(14,10,2022);
-    Hora H1, H2(10,42,39);
+    Fecha OtraF(16,9,1810);
+    Hora OtraH(5,4,3);
+    Evento E2(OtraF,OtraH);
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
 
-    //Prueba para constructores y muestraTusDatos()
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl;
-    cout<<"F2 = ";F2.muestraTusDatos();
-    cout<<"H2 = ";H2.muestraTusDatos();
-    cout<<endl<<endl;
+    Evento E3(32,14,-1,24,60,61);
+    cout<<"E3"<<endl;
+    E3.muestraTusDatos();cout<<endl;
     system("pause");
     system("cls");
-
 
     //Prueba para pideleAlUsuarioTusDatos()
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl<<endl;
+    cout<<"Prueba para pideleAlUsuarioTusDatos()"<<endl
+        <<"Ingrese Fecha y Hora incorrectas. Ejemplo: -1/0/0 y -1:-1:-1"<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
 
-    cout<<"F1"<<endl;F1.pideleAlUsuarioTusDatos();
-    cout<<"H1"<<endl;H1.pideleAlUsuarioTusDatos();
+    cout<<"E1"<<endl;
+    E1.pideleAlUsuarioTusDatos();cout<<endl;
 
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl<<endl;
     system("pause");
     system("cls");
 
+    cout<<"Prueba para pideleAlUsuarioTusDatos()"<<endl
+        <<"Ingrese Fecha y Hora correctas. Ejemplo: 3/4/2012 y 5:6:7"<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
 
-    //Pruebas para metodos que retornan copia de atributo
-    cout<<"F1"<<endl
-        <<F1.dameTuDia()<<endl
-        <<F1.dameTuMes()<<endl
-        <<F1.dameTuAnio()<<endl<<endl;
-    cout<<"H1"<<endl
-        <<H1.dameTuHora()<<endl
-        <<H1.dameTuMinuto()<<endl
-        <<H1.dameTuSegundo()<<endl;
-    cout<<endl;
-    cout<<"F2"<<endl
-        <<F2.dameTuDia()<<endl
-        <<F2.dameTuMes()<<endl
-        <<F2.dameTuAnio()<<endl<<endl;
-    cout<<"H2"<<endl
-        <<H2.dameTuHora()<<endl
-        <<H2.dameTuMinuto()<<endl
-        <<H2.dameTuSegundo()<<endl;
-    cout<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.pideleAlUsuarioTusDatos();cout<<endl;
+
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
     system("pause");
     system("cls");
 
+    //Pruebas para dameTuF(), dameTuH(),
+    //modificaTuF() y modificaTuH()
+    cout<<"Pruebas para dameTuF(), dameTuH(), "
+        <<"modificaTuF() y modificaTuH()"<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
 
-    //Pruebas para metodos que modifican un atributo
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl;
-    cout<<"F2 = ";F2.muestraTusDatos();
-    cout<<"H2 = ";H2.muestraTusDatos();
-    cout<<endl<<endl;
-
-    cout<<"F1 modificado con los datos de F2"<<endl;
-    F1.modificaTuDia(F2.dameTuDia());
-    F1.modificaTuMes(F2.dameTuMes());
-    F1.modificaTuAnio(F2.dameTuAnio());
-    cout<<"H1 modificado con los datos de H2"<<endl<<endl;
-    H1.modificaTuHora(H2.dameTuHora());
-    H1.modificaTuMinuto(H2.dameTuMinuto());
-    H1.modificaTuSegundo(H2.dameTuSegundo());
-
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl;
-    cout<<"F2 = ";F2.muestraTusDatos();
-    cout<<"H2 = ";H2.muestraTusDatos();
-    cout<<endl<<endl;
+    E1.modificaTuF(E2.dameTuF());
+    E1.modificaTuH(E2.dameTuH());
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
     system("pause");
     system("cls");
 
+    //Pruebas para modificaTuF() y modificaTuH()
+    cout<<"Pruebas para modificaTuF() y modificaTuH()"<<endl<<endl;
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
+    cout<<"E3"<<endl;
+    E3.muestraTusDatos();cout<<endl;
 
-    //Pruebas para metodo que modifica todos los atributos
-    cout<<"F1 = ";F1.muestraTusDatos();
-    cout<<"H1 = ";H1.muestraTusDatos();
-    cout<<endl;
-    cout<<"F2 = ";F2.muestraTusDatos();
-    cout<<"H2 = ";H2.muestraTusDatos();
-    cout<<endl<<endl;
+    E2.modificaTuF( E3.dameTuF().dameTuDia()
+                    ,
+                    E3.dameTuF().dameTuMes()
+                    ,
+                    E3.dameTuF().dameTuAnio()
+    );
+    E2.modificaTuH( E3.dameTuH().dameTuHora()
+                    ,
+                    E3.dameTuH().dameTuMinuto()
+                    ,
+                    E3.dameTuH().dameTuSegundo()
+    );
 
-    F1.modificaTusDatos(9,8,2007);
-    H1.modificaTusDatos(6,5,4);
-    F2.modificaTusDatos(1,3,2015);
-    H2.modificaTusDatos(7,9,11);
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
+    system("pause");
+    system("cls");
 
-    cout<<"F1 modificado = ";F1.muestraTusDatos();
-    cout<<"H1 modificado = ";H1.muestraTusDatos();
-    cout<<endl;
-    cout<<"F2 modificado = ";F2.muestraTusDatos();
-    cout<<"H2 modificado = ";H2.muestraTusDatos();
-    cout<<endl<<endl;
+    //Prueba para modificaTusDatos()
+    cout<<"Prueba para modificaTusDatos()"<<endl<<endl;
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
+
+    E2.modificaTusDatos(E1.dameTuF(), E1.dameTuH());
+
+    cout<<"E2"<<endl;
+    E2.muestraTusDatos();cout<<endl;
+    system("pause");
+    system("cls");
+
+    //Prueba para modificaTusDatos()
+    cout<<"Prueba para modificaTusDatos()"<<endl<<endl;
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
+    cout<<"E3"<<endl;
+    E3.muestraTusDatos();cout<<endl;
+
+    E1.modificaTusDatos(
+        E3.dameTuF().dameTuDia(), E3.dameTuF().dameTuMes(), E3.dameTuF().dameTuAnio()
+        ,
+        E3.dameTuH().dameTuHora(), E3.dameTuH().dameTuMinuto(),E3.dameTuH().dameTuSegundo()
+    );
+
+    cout<<"E1"<<endl;
+    E1.muestraTusDatos();cout<<endl;
 
     return 0;
 }
