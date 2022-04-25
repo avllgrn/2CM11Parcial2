@@ -3,9 +3,12 @@
 
 #include "Punto.h"
 class Punto3D : Punto{
-private:
+protected:
     double z;
 public:
+    Punto3D(void);
+    Punto3D(double x, double y, double z);
+    ~Punto3D(void);
     void pideleAlUsuarioTusDatos(void);
     void muestraTusDatos(void);
     double dameTuZ(void);

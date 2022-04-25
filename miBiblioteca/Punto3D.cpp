@@ -1,6 +1,13 @@
 #include "Punto3D.h"
 
-
+Punto3D::Punto3D(void) : Punto(){
+    Punto3D::z = 0.0;
+}
+Punto3D::Punto3D(double x, double y, double z) : Punto(x,y){
+    Punto3D::z = z;
+}
+Punto3D::~Punto3D(void){
+}
 void Punto3D::pideleAlUsuarioTusDatos(void){
     cout<<"Dame mi x ";
     cin>>this->x;
