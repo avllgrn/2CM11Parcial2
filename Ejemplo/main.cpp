@@ -10,6 +10,11 @@ int main(void){
     P.muestraTusDatos();
     cout<<endl<<endl;
 
+    Punto3D Q(9.8,8.7,7.6);
+    cout<<"Q";
+    Q.muestraTusDatos();
+    cout<<endl<<endl;
+
     cout<<"P"<<endl;
     P.pideleAlUsuarioTusDatos();
     cout<<endl;
