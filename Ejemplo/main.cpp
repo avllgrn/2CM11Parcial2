@@ -7,29 +7,35 @@ using namespace std;
 int main(void){
     CirculoP Q(1,2,3,4);
 
-    Q.muestraTusDatos();
+    Q.muestraTusDatos();//Vemos 1,2,3,4
     cout<<endl<<endl;
 
-    cout<<"x de C = "<<Q.dameTuC().dameTuX()<<endl;
-    cout<<"y de C = "<<Q.dameTuC().dameTuY();
+    Punto CopiaDeC;
+
+    CopiaDeC = Q.dameTuC();
+    CopiaDeC.modificaTuX(5);
+    Q.modificaTuC(CopiaDeC);
+    Q.muestraTusDatos();//풴eremos 5,2,3,4?
     cout<<endl<<endl;
 
-    cout<<"x de P = "<<Q.dameTuP().dameTuX()<<endl;
-    cout<<"y de P = "<<Q.dameTuP().dameTuY();
+    CopiaDeC = Q.dameTuC();
+    CopiaDeC.modificaTuY(6);
+    Q.modificaTuC(CopiaDeC);
+    Q.muestraTusDatos();//풴eremos 5,6,3,4?
     cout<<endl<<endl;
 
-    cout<<"("<<Q.dameTuC().dameTuX();
-    cout<<", "<<Q.dameTuC().dameTuY();
-    cout<<")"<<endl<<endl;
+    Punto CopiaDeP;
 
-    cout<<"("<<Q.dameTuP().dameTuX();
-    cout<<", "<<Q.dameTuP().dameTuY();
-    cout<<")"<<endl<<endl;
-
-    Q.dameTuC().muestraTusDatos();
+    CopiaDeP = Q.dameTuP();
+    CopiaDeP.modificaTuX(7);
+    Q.modificaTuP(CopiaDeP);
+    Q.muestraTusDatos();//풴eremos 5,6,7,4?
     cout<<endl<<endl;
 
-    Q.dameTuP().muestraTusDatos();
+    CopiaDeP = Q.dameTuP();
+    CopiaDeP.modificaTuY(8);
+    Q.modificaTuP(CopiaDeP);
+    Q.muestraTusDatos();//풴eremos 5,6,7,8?
     cout<<endl<<endl;
 
     return 0;
