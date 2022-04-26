@@ -1,53 +1,36 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Punto.h"
-#include "Punto3D.h"
+#include <math.h>
+#include "CirculoP.h"
 using namespace std;
 
 int main(void){
-    Punto3D P;
-    cout<<"P";
-    P.muestraTusDatos();
-    cout<<endl<<endl;
+    CirculoP Q(1,2,3,4);
 
-    Punto3D Q(9.8,8.7,7.6);
-    cout<<"Q";
     Q.muestraTusDatos();
     cout<<endl<<endl;
 
-    cout<<"P"<<endl;
-    P.pideleAlUsuarioTusDatos();
-    cout<<endl;
-    cout<<"P";
-    P.muestraTusDatos();
+    cout<<"x de C = "<<Q.dameTuC().dameTuX()<<endl;
+    cout<<"y de C = "<<Q.dameTuC().dameTuY();
     cout<<endl<<endl;
 
-    cout<<"z de  P = "<<P.dameTuZ()<<endl<<endl;
-
-    cout<<"P.modificaTuZ(4); => P";
-    P.modificaTuZ(4);
-    P.muestraTusDatos();
+    cout<<"x de P = "<<Q.dameTuP().dameTuX()<<endl;
+    cout<<"y de P = "<<Q.dameTuP().dameTuY();
     cout<<endl<<endl;
 
-    cout<<"P.modificaTusDatos(5,6,7); => P";
-    P.modificaTusDatos(5,6,7);
-    P.muestraTusDatos();
+    cout<<"("<<Q.dameTuC().dameTuX();
+    cout<<", "<<Q.dameTuC().dameTuY();
+    cout<<")"<<endl<<endl;
+
+    cout<<"("<<Q.dameTuP().dameTuX();
+    cout<<", "<<Q.dameTuP().dameTuY();
+    cout<<")"<<endl<<endl;
+
+    Q.dameTuC().muestraTusDatos();
+    cout<<endl<<endl;
+
+    Q.dameTuP().muestraTusDatos();
     cout<<endl<<endl;
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
