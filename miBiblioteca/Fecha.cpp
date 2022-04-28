@@ -12,15 +12,15 @@ void Fecha::verificaDatos(void){
         this->anio = 2022;
 }
 Fecha::Fecha(void){
-    this->dia = 1;
-    this->mes = 1;
-    this->anio = 2022;
+    Fecha::dia = 1;
+    Fecha::mes = 1;
+    Fecha::anio = 2022;
 }
 Fecha::Fecha(int dia, int mes, int anio){
-    this->dia = dia;
-    this->mes = mes;
-    this->anio = anio;
-    this->verificaDatos();
+    Fecha::dia = dia;
+    Fecha::mes = mes;
+    Fecha::anio = anio;
+    Fecha::verificaDatos();
 }
 Fecha::~Fecha(void){
     //cout<<"Fecha destruida..."<<endl;

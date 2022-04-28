@@ -1,34 +1,34 @@
 #include "Persona.h"
 
 Persona::Persona(void){
-    this->estatura = 1.65;
+    Persona::estatura = 1.65;
 }
 Persona::Persona(string Nombre,string Paterno,string Materno,string Genero,float estatura,Evento FechaNacimiento){
-    this->Nombre = Nombre;
-    this->Paterno = Paterno;
-    this->Materno = Materno;
-    this->Genero = Genero;
-    this->estatura = estatura;
-    this->FechaNacimiento = FechaNacimiento;
-    this->verificaDatos();
+    Persona::Nombre = Nombre;
+    Persona::Paterno = Paterno;
+    Persona::Materno = Materno;
+    Persona::Genero = Genero;
+    Persona::estatura = estatura;
+    Persona::FechaNacimiento = FechaNacimiento;
+    Persona::verificaDatos();
 }
 Persona::Persona(string Nombre,string Paterno,string Materno,string Genero,float estatura,Fecha F,Hora H){
-    this->Nombre = Nombre;
-    this->Paterno = Paterno;
-    this->Materno = Materno;
-    this->Genero = Genero;
-    this->estatura = estatura;
-    this->FechaNacimiento.modificaTusDatos(F,H);
-    this->verificaDatos();
+    Persona::Nombre = Nombre;
+    Persona::Paterno = Paterno;
+    Persona::Materno = Materno;
+    Persona::Genero = Genero;
+    Persona::estatura = estatura;
+    Persona::FechaNacimiento.modificaTusDatos(F,H);
+    Persona::verificaDatos();
 }
 Persona::Persona(string Nombre,string Paterno,string Materno,string Genero,float estatura,int dia,int mes,int anio,int hora,int minuto,int segundo){
-    this->Nombre = Nombre;
-    this->Paterno = Paterno;
-    this->Materno = Materno;
-    this->Genero = Genero;
-    this->estatura = estatura;
-    this->FechaNacimiento.modificaTusDatos(dia,mes,anio,hora,minuto,segundo);
-    this->verificaDatos();
+    Persona::Nombre = Nombre;
+    Persona::Paterno = Paterno;
+    Persona::Materno = Materno;
+    Persona::Genero = Genero;
+    Persona::estatura = estatura;
+    Persona::FechaNacimiento.modificaTusDatos(dia,mes,anio,hora,minuto,segundo);
+    Persona::verificaDatos();
 }
 Persona::~Persona(void){
     //cout<<"Objeto destruido..."<<endl;

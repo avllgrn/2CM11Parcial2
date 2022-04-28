@@ -12,15 +12,15 @@ void Hora::verificaDatos(void){
         this->segundo = 0;
 }
 Hora::Hora(void){
-    this->hora = 0;
-    this->minuto = 0;
-    this->segundo = 0;
+    Hora::hora = 0;
+    Hora::minuto = 0;
+    Hora::segundo = 0;
 }
 Hora::Hora(int hora, int minuto, int segundo){
-    this->hora = hora;
-    this->minuto = minuto;
-    this->segundo = segundo;
-    this->verificaDatos();
+    Hora::hora = hora;
+    Hora::minuto = minuto;
+    Hora::segundo = segundo;
+    Hora::verificaDatos();
 }
 Hora::~Hora(void){
     //cout<<"Hora destruida..."<<endl;
