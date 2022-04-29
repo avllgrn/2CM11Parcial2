@@ -23,6 +23,7 @@ void Evento::pideleAlUsuarioTusDatos(void){
 }
 void Evento::muestraTusDatos(void){
     cout<<"F ";this->F.muestraTusDatos();
+    cout<<endl;
     cout<<"H ";this->H.muestraTusDatos();
 }
 Fecha Evento::dameTuF(void){

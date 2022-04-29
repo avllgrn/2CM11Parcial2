@@ -55,7 +55,6 @@ void Persona::muestraTusDatos(void){
         <<"estatura: "<<this->estatura<<endl
         <<"Fecha de Nacimiento: "<<endl;
     this->FechaNacimiento.muestraTusDatos();
-    cout<<endl;
 }
 string Persona::dameTuNombre(void){
     return this->Nombre;

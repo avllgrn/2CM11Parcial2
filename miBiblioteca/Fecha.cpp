@@ -34,7 +34,7 @@ void Fecha::pideleAlUsuarioTusDatos(void){
 void Fecha::muestraTusDatos(void){
     cout<<this->dia<<" / "
         <<this->mes<<" / "
-        <<this->anio<<endl;
+        <<this->anio;
 }
 int Fecha::dameTuDia(void){
     return this->dia;

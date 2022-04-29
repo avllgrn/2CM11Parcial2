@@ -34,7 +34,7 @@ void Hora::pideleAlUsuarioTusDatos(void){
 void Hora::muestraTusDatos(void){
     cout<<this->hora<<" : "
         <<this->minuto<<" : "
-        <<this->segundo<<endl;
+        <<this->segundo;
 }
 int Hora::dameTuHora(void){
     return this->hora;
