@@ -1,98 +1,44 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Persona.h"
+#include "Empleado.h"
 using namespace std;
 
 int main(void){
-    Fecha F1(7,8,1987),F2(2,4,2006);
-    Hora H1(6,5,4),H2(4,2,0);
-    Evento E(F2,H2);
+    Fecha F(12,6,1999);
+    Hora H(12,34,56);
+    Evento E(13,8,2001,7,8,9);
+    //Pruebas de constructores y muestraTusDatos()
+    Empleado E1;
+    Empleado E2("Juan","Perez","Lopez","m",1.82,E,2,4967.6,"Intendente");
+    Empleado E3("Mario","Elmada","Juarez","masc.",1.76,F,H,3,5678.9,"General");
+    Empleado E4("Laura","Zuniga","Ruiz","Fem.",1.86,29,4,2004,8,54,32,4,49876.54,"Gerente");
 
-    //Pruebas para constructores y muestraTusDatos()
-    Persona A;
-    Persona B("Erika","Rodriguez","Gomez","F",1.67,E);
-    Persona C("Renata","Hernandez","Martinez","Femenino",1.76,F1,H1);
-    Persona D("Juan","Perez","Lopez","Masculino",1.67,5,6,1789,10,11,12);
-
-    cout<<"A"<<endl;A.muestraTusDatos();
-    cout<<"B"<<endl;B.muestraTusDatos();
-    cout<<"C"<<endl;C.muestraTusDatos();
-    cout<<"D"<<endl;D.muestraTusDatos();cout<<endl;
+    cout<<"E1"<<endl;E1.muestraTusDatos();cout<<endl;
+    cout<<"E2"<<endl;E2.muestraTusDatos();cout<<endl;
+    cout<<"E3"<<endl;E3.muestraTusDatos();cout<<endl;
+    cout<<"E4"<<endl;E4.muestraTusDatos();cout<<endl;
     system("pause");
     system("cls");
 
-    cout<<"A"<<endl;A.muestraTusDatos();
-    cout<<"A"<<endl;A.pideleAlUsuarioTusDatos();
-    cout<<"A"<<endl;A.muestraTusDatos();
+    //Prueba de pideleElUsuarioTusDatos()
+    cout<<"E1"<<endl;E1.muestraTusDatos();cout<<endl;
+
+    cout<<"E1"<<endl;E1.pideleAlUsuarioTusDatos();
+
+    cout<<"E1"<<endl;E1.muestraTusDatos();cout<<endl;
     system("pause");
     system("cls");
 
-    //Pruebas para dameTuNombre(), dameTuPaterno(), dameTuMaterno()
-    //dameTuGenero(), dameTuEstatura(), dameTuFechaNacimiento()
-    //modificaNombre(), modificaTuPaterno(), modificaTuMaterno()
-    //modificaTuGenero(), modificaEstatura(),
-    //y modificaTuFechaNacimiento(Evento)
-    cout<<"A"<<endl;A.muestraTusDatos();
-    cout<<"B"<<endl;B.muestraTusDatos();
-    B.modificaTuNombre(A.dameTuNombre());
-    B.modificaTuPaterno(A.dameTuPaterno());
-    B.modificaTuMaterno(A.dameTuMaterno());
-    B.modificaTuGenero(A.dameTuGenero());
-    B.modificaTuEstatura(A.dameTuEstatura());
-    B.modificaTuFechaNacimiento(A.dameTuFechaNacimiento());
-    cout<<"B"<<endl;B.muestraTusDatos();cout<<endl;
+    //Pruebas de dameTuNumero(),dameTuSueldo(),dameTuPuesto()
+    //modificaTuNumero(),modificaTuSueldo() y modificaTuPuesto()
+    cout<<"E1"<<endl;E1.muestraTusDatos();cout<<endl;
+    cout<<"E2"<<endl;E2.muestraTusDatos();cout<<endl;
 
-    system("pause");
-    system("cls");
+    E2.modificaTuNumero(E1.dameTuNumero());
+    E2.modificaTuSueldo(E1.dameTuSueldo());
+    E2.modificaTuPuesto(E1.dameTuPuesto());
 
-    //Prueba para modificaTuFechaNacimiento(Fecha, Hora)
-    cout<<"A"<<endl;A.muestraTusDatos();
-    cout<<"C"<<endl;C.muestraTusDatos();
-    C.modificaTuNombre(A.dameTuNombre());
-    C.modificaTuPaterno(A.dameTuPaterno());
-    C.modificaTuMaterno(A.dameTuMaterno());
-    C.modificaTuGenero(A.dameTuGenero());
-    C.modificaTuEstatura(A.dameTuEstatura());
-    C.modificaTuFechaNacimiento(
-        A.dameTuFechaNacimiento().dameTuF(),
-        A.dameTuFechaNacimiento().dameTuH()
-    );
-    cout<<"C"<<endl;C.muestraTusDatos();cout<<endl;
-
-    system("pause");
-    system("cls");
-
-    //Prueba para modificaTuFechaNacimiento(int,int,int,int,int,int)
-    cout<<"A"<<endl;A.muestraTusDatos();
-    cout<<"D"<<endl;D.muestraTusDatos();
-    D.modificaTuNombre(A.dameTuNombre());
-    D.modificaTuPaterno(A.dameTuPaterno());
-    D.modificaTuMaterno(A.dameTuMaterno());
-    D.modificaTuGenero(A.dameTuGenero());
-    D.modificaTuEstatura(A.dameTuEstatura());
-    D.modificaTuFechaNacimiento(
-        A.dameTuFechaNacimiento().dameTuF().dameTuDia(),
-        A.dameTuFechaNacimiento().dameTuF().dameTuMes(),
-        A.dameTuFechaNacimiento().dameTuF().dameTuAnio(),
-        A.dameTuFechaNacimiento().dameTuH().dameTuHora(),
-        A.dameTuFechaNacimiento().dameTuH().dameTuMinuto(),
-        A.dameTuFechaNacimiento().dameTuH().dameTuSegundo()
-    );
-    cout<<"D"<<endl;D.muestraTusDatos();cout<<endl;
-
-    system("pause");
-    system("cls");
-
-    //Prueba para modificaTuDia(), modificaTuMes(), modificaTuAnio(),
-    //modificaTuHora(), modificaTuMinuto(), y modificaTuSegundo()
-    cout<<"A"<<endl;A.muestraTusDatos();
-    A.modificaTuDia(15);
-    A.modificaTuMes(9);
-    A.modificaTuAnio(1810);
-    A.modificaTuHora(2);
-    A.modificaTuMinuto(30);
-    A.modificaTuSegundo(59);
-    cout<<"A"<<endl;A.muestraTusDatos();
+    cout<<"E2"<<endl;E1.muestraTusDatos();cout<<endl;E1.dameTuEstatura();
 
     return 0;
 }
