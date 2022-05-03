@@ -1,19 +1,19 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Alumno.h"
+#include "Secretaria.h"
 using namespace std;
 
 int main(void){
-    Fecha F1(7,8,2007),F2(2,4,2006);
+    Fecha F1(7,8,1987),F2(2,4,2006);
     Hora H1(6,5,4),H2(4,2,0);
     Evento E(F2,H2);
 
     //Pruebas para constructores y muestraTusDatos()
-    Alumno A;
-    Alumno B("Erika","Rodriguez","Gomez","F",1.67,E,2,8.7,"I.C.E");
-    Alumno C("Renata","Hernandez","Martinez","Femenino",1.76,F1,H1,3,9.1,"I.C.A.");
-    Alumno D("Juan","Perez","Lopez","Masculino",1.67,5,6,1789,10,11,12,4,7.3,"I.E.");
-    Alumno G("Gabriel","Mendez","Anaya","M",1.72,9,8,1654,3,2,1,5,8.1,"I.S.I.S.A.");
+    Secretaria A;
+    Secretaria B("Erika","Rodriguez","Gomez","F",1.67,E,2,4000,"Secretaria Ejecutiva",1,75,"Pitman");
+    Secretaria C("Renata","Hernandez","Martinez","Femenino",1.76,F1,H1,3,5000,"Secretaria Gerencial",3,75.5,"Garriga");
+    Secretaria D("Juan","Perez","Lopez","Masculino",1.67,5,6,1789,10,11,12,4,3900,"Secretario Particular",1,76,"Gregg");
+    Secretaria G("Gabriel","Mendez","Anaya","M",1.72,9,8,1654,3,2,1,5,6543.21,"Secretario",2,76.5,"Larralde");
 
     cout<<"A"<<endl;A.muestraTusDatos();cout<<endl;
     cout<<"B"<<endl;B.muestraTusDatos();cout<<endl;
@@ -97,14 +97,30 @@ int main(void){
     system("pause");
     system("cls");
 
-    //Pruebas para dameTuSemestre(), dameTuPromedio(), dameTuCarrera()
-    //modificaTuSemestre(), modificaTuPromedio() y modificaTuCarrera()
+
+    //Pruebas para dameTuNumero(), dameTuSueldo(), dameTuPuesto()
+    //modificaTuNumero(), modificaTuSueldo(),
+    //y modificaTuPuesto()
     cout<<"G"<<endl;G.muestraTusDatos();cout<<endl;
     cout<<"A"<<endl;A.muestraTusDatos();cout<<endl;
-    G.modificaTuSemestre(A.dameTuSemestre());
-    G.modificaTuPromedio(A.dameTuPromedio());
-    G.modificaTuCarrera(A.dameTuCarrera());
-    cout<<"F"<<endl;G.muestraTusDatos();cout<<endl;
+    G.modificaTuNumero(A.dameTuNumero());
+    G.modificaTuSueldo(A.dameTuSueldo());
+    G.modificaTuPuesto(A.dameTuPuesto());
+    cout<<"G"<<endl;G.muestraTusDatos();cout<<endl;
+    system("pause");
+    system("cls");
+
+
+    //Pruebas de dameTuJefes(),dameTuPalabrasPorMinuto(),dameTuTaquigrafia()
+    //modificaTuJefes(),modificaTuPalabrasPorMinuto() y modificaTuTaquigrafia()
+    cout<<"G"<<endl;G.muestraTusDatos();cout<<endl;
+    cout<<"A"<<endl;A.muestraTusDatos();cout<<endl;
+
+    G.modificaTuJefes(A.dameTuJefes());
+    G.modificaTuPalabrasPorMinuto(A.dameTuPalabrasPorMinuto());
+    G.modificaTuTaquigrafia(A.dameTuTaquigrafia());
+
+    cout<<"G"<<endl;G.muestraTusDatos();cout<<endl;
 
     return 0;
 }
